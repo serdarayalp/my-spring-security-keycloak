@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="de">
+
+<head th:include="layout::headerFragment">
+    <title>Kundenmanagement-System :: PUBLIC</title>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <h3>
+                Username: <span th:text="${username}"></span>.
+            </h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Adresse</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="customer : ${customers}">
+                    <td th:text="${customer.id}"></td>
+                    <td th:text="${customer.name}"></td>
+                    <td th:text="${customer.address}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

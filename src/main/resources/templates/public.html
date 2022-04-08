@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="de">
+
+<head th:include="layout::headerFragment">
+    <title>Kundenmanagement-System :: PUBLIC</title>
+</head>
+
+<body>
+<div class="container">
+    <div>
+        <h2>Kunden</h2>
+        <div class="well">
+            <b>Passwort-Geschützten Bereich eintreten:</b>
+            <a th:href="@{/customers}">Kunden anzeigen</a>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>
